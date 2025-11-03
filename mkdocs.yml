@@ -1,0 +1,50 @@
+# ============================================================
+# Heat & Fluid Flow Playground – MkDocs Configuration
+# ============================================================
+
+site_name: Heat & Fluid Flow Playground
+site_description: Interactive mini-simulations for heat transfer and fluid mechanics.
+site_author: Büşra Hepgüzel
+site_url: https://hepguzel.github.io/heat-fluid-flow-playground/
+repo_url: https://github.com/hepguzel/heat-fluid-flow-playground
+repo_name: GitHub Repository
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/fire
+  palette:
+    scheme: default
+    primary: indigo
+    accent: deep purple
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+
+markdown_extensions:
+  - md_in_html
+  - admonition
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+  - javascripts/math-init.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - 2-D Conduction: conduction-2d.md
